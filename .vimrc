@@ -15,6 +15,13 @@ so ~/.vim/plugins.vim         " Loads the 'plugins.vim' file located in '~/.vim'
 so ~/.vim/plugin-config.vim   " Loads the 'plugin-config.vim' file located in '~/.vim'
 so ~/.vim/maps.vim            " Loads the 'maps.vim' file located in '~/.vim'
 
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateOpenedFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateDefaultExtensionSymbol = ''
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols = {}
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['html'] = ''
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['css'] = ''
 
 colorscheme gruvbox
 set laststatus=2
