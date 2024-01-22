@@ -1,4 +1,9 @@
 {
 	"suggest.noselect":false,
-	"pyright.inlayHints.functionReturnTypes":false
+	"pyright.inlayHints.functionReturnTypes":false,
+	"diagnostic.messageTarget": "float",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextPrefix": "<-"
 }

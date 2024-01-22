@@ -1,3 +1,6 @@
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 let mapleader=" "
 
 " Close Files
@@ -19,6 +22,8 @@ nnoremap <silent> <Leader><C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <Leader><C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <Leader><C-l> :TmuxNavigateRight<cr>
 
+nnoremap <leader>th :vsp <Bar> :terminal<CR>
+
 " split resize
 nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
@@ -27,6 +32,7 @@ nnoremap <Leader>< 10<C-w><
 nnoremap <C-f> :Files<CR>
 nnoremap <C-d> :Lines<CR>
 nnoremap <C-g> :Ag<CR>
+nnoremap <Leader>s :CocSearch
 
 " vim-airline
 nmap <leader>1 :bfirst<CR>
