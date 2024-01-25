@@ -25,6 +25,13 @@ let g:bufferline_solo_highlight = 1
 let g:airline#extensions#tabline#enabled = 1
 
 
+let g:WebDevIconsUnicodeDecorateFileNodes = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateOpenedFolderNodes = 1
+let g:WebDevIconsUnicodeDecorateDefaultExtensionSymbol = ''
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols = {}
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['html'] = ''
+let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['css'] = ''
 
 "-------> Coc Set Up <----------------------------------------------------
 

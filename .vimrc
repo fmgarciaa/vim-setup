@@ -10,23 +10,17 @@ set encoding=utf-8            " Sets the file encoding to UTF-8
 set showmatch                 " Shows matching parentheses/braces when typing
 set sw=2                      " Sets the indent width to 2 spaces
 set relativenumber            " Displays line numbers relative to the current line
-set termguicolors
+set termguicolors             " Enable TrueColor support for richer and more accurate colors in the terminal.
+set hidden                    " Allows switching between files without saving changes immediately.
+set wildmenu                  "Enables the autocompletion menu
+set wildoptions=pum           "Configures the autocompletion menu options as a popup menu
 so ~/.vim/plugins.vim         " Loads the 'plugins.vim' file located in '~/.vim'
 so ~/.vim/plugin-config.vim   " Loads the 'plugin-config.vim' file located in '~/.vim'
 so ~/.vim/maps.vim            " Loads the 'maps.vim' file located in '~/.vim'
 
-let g:WebDevIconsUnicodeDecorateFileNodes = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:WebDevIconsUnicodeDecorateOpenedFolderNodes = 1
-let g:WebDevIconsUnicodeDecorateDefaultExtensionSymbol = ''
-let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols = {}
-let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['html'] = ''
-let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['css'] = ''
-
 colorscheme gruvbox
 set laststatus=2
 set noshowmode
-
 
 "" Searching
 set hlsearch                  " Highlights matches during search

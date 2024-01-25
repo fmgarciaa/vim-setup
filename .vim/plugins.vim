@@ -38,6 +38,8 @@ Plug 'mhinz/vim-signify'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'Asheq/close-buffers.vim'
 
 call plug#end()
 

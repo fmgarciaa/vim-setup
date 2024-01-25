@@ -6,6 +6,8 @@ let mapleader=" "
 " Close Files
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
 
 " Save Files
 nnoremap <silent> <Leader>w :w<Bar>echo 'Saved File!!'<Bar>call timer_start(2000, {-> execute('redraw')})<CR>
@@ -43,7 +45,11 @@ nmap <leader>5 :bfirst<CR>:4bn<CR>
 nmap <leader>6 :bfirst<CR>:5bn<CR>
 nmap <leader>7 :bfirst<CR>:6bn<CR>
 
-" Vertical and Horizontal windows Manage
+" Buffers Manage
+nnoremap <silent> Q     :Bdelete menu<CR>
+nnoremap <silent> <C-q> :bd <CR>
+
+
 function! OpenFileInVerticalSplit()
     let file_name = input('Enter file name: ')
     if !empty(file_name)
