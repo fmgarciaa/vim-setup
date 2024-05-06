@@ -1,8 +1,40 @@
 let g:indentLine_char_list = ['┊']
 let g:NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowBookmarks = 1   " Show the bookmarks table
+let NERDTreeShowLineNumbers = 0 " Hide line numbers
+let NERDTreeMinimalMenu = 1     " Use the minimal menu (m)
+let NERDTreeWinSize = 31        " Set panel width to 31 columns
 
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+" Focus the panel when opening it
+let g:tagbar_autofocus = 1
+" Highlight the active tag
+let g:tagbar_autoshowtag = 1
+" Make panel vertical and place on the right
+let g:tagbar_position = 'botright vertical'
+
+" Use the ack tool as the backend
+let g:ctrlsf_backend = 'ack'
+" Auto close the results panel when opening a file
+let g:ctrlsf_auto_close = { "normal":0, "compact":0 }
+" Immediately switch focus to the search window
+let g:ctrlsf_auto_focus = { "at":"start" }
+" Don't open the preview window automatically
+let g:ctrlsf_auto_preview = 0
+" Use the smart case sensitivity search scheme
+let g:ctrlsf_case_sensitive = 'smart'
+" Normal mode, not compact mode
+let g:ctrlsf_default_view = 'normal'
+" Use absoulte search by default
+let g:ctrlsf_regex_pattern = 0
+" Position of the search window
+let g:ctrlsf_position = 'right'
+" Width or height of search window
+let g:ctrlsf_winsize = '46'
+" Search from the current working directory
+let g:ctrlsf_default_root = 'cwd'
+
+let $FZF_DEFAULT_COMMAND = 'ag --depth 1  --hidden --ignore .git -g ""'
 
 " Airline
 let g:airline_theme           = 'molokai'
@@ -16,6 +48,7 @@ let g:airline#extensions#default#section_truncate_width={
   \ }
 let g:airline#extensions#ctrlp#color_template = 'replace'
 let airline#extensions#tmuxline#snapshot_file = '~/.tmux/tmuxline.conf'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " Bufferline
 let g:bufferline_echo           = 0
@@ -32,6 +65,20 @@ let g:WebDevIconsUnicodeDecorateDefaultExtensionSymbol = ''
 let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols = {}
 let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateDevFileTypeSymbols['css'] = ''
+
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 "-------> Coc Set Up <----------------------------------------------------
 

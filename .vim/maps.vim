@@ -10,11 +10,11 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 
 " Save Files
-nnoremap <silent> <Leader>w :w<Bar>echo 'Saved File!!'<Bar>call timer_start(2000, {-> execute('redraw')})<CR>
+nnoremap <silent> <Leader>w :w<CR>
 nnoremap <Leader>W :wq<CR>
 
 "NerdTree
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <leader>e :NERDTreeToggle<CR>
 map <Leader>nt :NERDTreeFind<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -24,17 +24,18 @@ nnoremap <silent> <Leader><C-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <Leader><C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <Leader><C-l> :TmuxNavigateRight<cr>
 
-nnoremap <leader>th :vsp <Bar> :terminal<CR>
+nnoremap <leader>/ :terminal<CR>
 
 " split resize
 nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
 
 " FZF Manage
-nnoremap <C-f> :Files<CR>
+nnoremap <Leader>f :Files<CR>
 nnoremap <C-d> :Lines<CR>
 nnoremap <C-g> :Ag<CR>
-nnoremap <Leader>s :CocSearch
+nnoremap <Leader>s :CocSearch<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " vim-airline
 nmap <leader>1 :bfirst<CR>
@@ -48,6 +49,9 @@ nmap <leader>7 :bfirst<CR>:6bn<CR>
 " Buffers Manage
 nnoremap <silent> Q     :Bdelete menu<CR>
 nnoremap <silent> <C-q> :bd <CR>
+
+" Mapping to open and close the panel
+nmap <F8> :TagbarToggle<CR>
 
 
 function! OpenFileInVerticalSplit()
@@ -66,5 +70,5 @@ endfunction
 
 nnoremap <leader>vv :call OpenFileInVerticalSplit()<CR>
 nnoremap <leader>hh :call OpenFileInHorizontalSplit()<CR>
-
+nmap <C-Z> :vsplit <bar> :wincmd l <bar> :FSRight<CR>
 
