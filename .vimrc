@@ -14,11 +14,15 @@ set termguicolors             " Enable TrueColor support for richer and more acc
 set hidden                    " Allows switching between files without saving changes immediately.
 set wildmenu                  "Enables the autocompletion menu
 set wildoptions=pum           "Configures the autocompletion menu options as a popup menu
+set splitbelow                " Always split below
+set termwinsize=12x0          " Set terminal size
 so ~/.vim/plugins.vim         " Loads the 'plugins.vim' file located in '~/.vim'
 so ~/.vim/plugin-config.vim   " Loads the 'plugin-config.vim' file located in '~/.vim'
 so ~/.vim/maps.vim            " Loads the 'maps.vim' file located in '~/.vim'
+set guifont=hack_nerd_font:h13
 
 colorscheme gruvbox
+set background=dark
 set laststatus=2
 set noshowmode
 
